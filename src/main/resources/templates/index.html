@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Doctor Sign In</title>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
+<header th:fragment="top">
+    <a th:href="@{/}">
     <nav>
         <span>Doctor Secret Service</span>
         <a href="/">Sign In</a>
     </nav>
+    </a>
 </header>
 <ul class="doctor-list">
     <li><a href="/doctor/?number=1&name=William%20Hartnell">Doctor 1</a></li>
@@ -28,13 +30,15 @@
     <li><a href="/doctor/?number=13&name=Jodie%20Whittaker">Doctor 13</a></li>
     <li><a href="/doctor/">Unknown Doctor</a></li>
 </ul>
-<footer>
+<footer th:fragment="bottom">
+    <a th:href="@{/}">
     <ul>
         <li><a href="#">Twitter</a></li>
         <li><a href="#">Facebook</a></li>
         <li><a href="#">TARDIS</a></li>
     </ul>
     <span>Copyright BBC/Terry Nation 1963</span>
+    </a>
 </footer>
 </body>
 </html>
